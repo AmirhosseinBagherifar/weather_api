@@ -34,7 +34,7 @@ class WeatherApp(QWidget):
         self.get_button.clicked.connect(self.get_weather)
         self.layout.addWidget(self.get_button)
 
-        self.save_csv_button = QPushButton("📁 ذخیره در فایل CSV")
+        self.save_csv_button = QPushButton("ذخیره در فایل CSV")
         self.save_csv_button.clicked.connect(self.save_to_csv)
         self.layout.addWidget(self.save_csv_button)
 
@@ -48,7 +48,7 @@ class WeatherApp(QWidget):
             return
 
         if not API_KEY:
-            self.result_box.setText(" کلید API پیدا نشد. فایل .env را بررسی کنید.")
+            self.result_box.setText(" پیدا نشد")
             return
 
         params = {
